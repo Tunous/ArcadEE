@@ -81,7 +81,7 @@ namespace ArcadEE
             if (botId == "")
                 return;
             
-            var bot = Bots.FirstOrDefault(it => it.Metadata.Id == botId)?.Value;
+            var bot = Bots.FirstOrDefault(it => it.Metadata.Id == botId);
             if (bot == null)
             {
                 Console.WriteLine("ERROR: No valid bot found for [{0}].", botId);
@@ -89,7 +89,7 @@ namespace ArcadEE
             }
 
             PlaygroundBase playground;
-            if (bot.TryCreatePlaygroundAt(point, out playground))
+            if (bot.Value.TryCreatePlaygroundAt(point, out playground))
             {
                 Console.WriteLine("Created playground for {0}.", botId);
                 playgrounds.Add(playground);
