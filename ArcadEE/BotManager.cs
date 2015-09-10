@@ -27,7 +27,9 @@ namespace ArcadEE
 
             foreach (var bot in Bots)
             {
-                Console.WriteLine($" - {bot.Metadata.Id} ({bot.Metadata.Version})");
+                Console.WriteLine(" - {0} ({1})",
+                    bot.Metadata.Id,
+                    bot.Metadata.Version);
             }
         }
 
@@ -82,19 +84,20 @@ namespace ArcadEE
             var bot = Bots.FirstOrDefault(it => it.Metadata.Id == botId)?.Value;
             if (bot == null)
             {
-                Console.WriteLine($"ERROR: No valid bot found for [{botId}].");
+                Console.WriteLine("ERROR: No valid bot found for [{0}].", botId);
                 return;
             }
 
             PlaygroundBase playground;
             if (bot.TryCreatePlaygroundAt(point, out playground))
             {
-                Console.WriteLine($"Created playground for {botId}.");
+                Console.WriteLine("Created playground for {0}.", botId);
                 playgrounds.Add(playground);
             }
             else
             {
-                Console.WriteLine($"ERROR: Failed to create playground for [{botId}] at {point.X}x{point.Y}.");
+                Console.WriteLine("ERROR: Failed to create playground for [{0}] at {1}x{2}.",
+                    botId, point.X, point.Y);
             }
         }
     }
