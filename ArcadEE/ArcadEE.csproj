@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{D6DE0B89-7935-482B-A4DD-9831EB9E4F01}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ArcadEE</RootNamespace>
+    <AssemblyName>ArcadEE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="PlayerIOClient">
+      <HintPath>..\packages\PlayerIOClient-Signed.3.2.364\lib\PlayerIOClient.dll</HintPath>
+    </Reference>
+    <Reference Include="BotBits">
+      <HintPath>..\packages\BotBits.1.5.16\lib\net40\BotBits.dll</HintPath>
+    </Reference>
+    <Reference Include="BotBits.Commands">
+      <HintPath>..\packages\BotBits.Commands.1.2.2\lib\net40\BotBits.Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="BotCake">
+      <HintPath>..\packages\BotCake.1.0.3\lib\net40\BotCake.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BotManager.cs" />
+    <Compile Include="Configuration.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\ArcadeBot\ArcadeBot.csproj">
+      <Project>{2E76F976-B868-4214-93BC-A481C093996E}</Project>
+      <Name>ArcadeBot</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

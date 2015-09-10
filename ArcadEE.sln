@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadEE", "ArcadEE\ArcadEE.csproj", "{D6DE0B89-7935-482B-A4DD-9831EB9E4F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadeBot", "ArcadeBot\ArcadeBot.csproj", "{2E76F976-B868-4214-93BC-A481C093996E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E76F976-B868-4214-93BC-A481C093996E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2E76F976-B868-4214-93BC-A481C093996E}.Debug|x86.Build.0 = Debug|Any CPU
+		{2E76F976-B868-4214-93BC-A481C093996E}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E76F976-B868-4214-93BC-A481C093996E}.Release|x86.Build.0 = Release|Any CPU
+		{D6DE0B89-7935-482B-A4DD-9831EB9E4F01}.Debug|x86.ActiveCfg = Debug|x86
+		{D6DE0B89-7935-482B-A4DD-9831EB9E4F01}.Debug|x86.Build.0 = Debug|x86
+		{D6DE0B89-7935-482B-A4DD-9831EB9E4F01}.Release|x86.ActiveCfg = Release|x86
+		{D6DE0B89-7935-482B-A4DD-9831EB9E4F01}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
